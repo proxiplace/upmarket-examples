@@ -15,7 +15,7 @@ lead_id: Upmarket Lead Id
 
 ### `npm install`
 
-Install the required dependencies.\
+Install the required dependencies.
 
 ### `npm start`
 
