@@ -13,6 +13,10 @@ Line No 25 to 26
 journey_id: Upmarket Journey Id
 lead_id: Upmarket Lead Id
 
+### `npm install`
+
+Install the required dependencies.\
+
 ### `npm start`
 
 Runs the app in the development mode.\
