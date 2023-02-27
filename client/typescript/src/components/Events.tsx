@@ -6,10 +6,10 @@ type EventsProps = {
 
 function Events(props: EventsProps) {
   const {handleEventCreate} = props;
-  const [eventType, setEventType] = useState("sign_in");
+  const [eventId, setEventId] = useState("sign_in");
 
   function onCreateEventClicked() {
-    handleEventCreate(eventType);
+    handleEventCreate(eventId);
   }
 
   return (
@@ -22,8 +22,8 @@ function Events(props: EventsProps) {
                 {" "}
                 <span>Enter Event Type</span>
                 <input
-                  value={eventType}
-                  onChange={(e) => setEventType(e.target.value)}
+                  value={eventId}
+                  onChange={(e) => setEventId(e.target.value)}
                   autoComplete="off"
                   type="text"
                 />

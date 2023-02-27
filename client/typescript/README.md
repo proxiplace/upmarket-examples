@@ -1,8 +1,17 @@
-## Update Variables
+## Get Started
 
 Update .env file with the hosted backend url.
 
-Update
+Update Home.tsx with the following
+
+Line No 13 to 16
+client_lead_id: This is the unique identifier from your system
+journey_id:  Upmarket Journey Id
+lead_type: Leads are either an account or contact
+
+Line No 25 to 26
+journey_id: Upmarket Journey Id
+lead_id: Upmarket Lead Id
 
 ### `npm start`
 
@@ -11,30 +20,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### Initialize Lead
 
-Once the React application runs, click on login to create lead.
+Once the React application runs, click on login to initialize lead.
 
-### `npm run build`
+### Create Event
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Once logged in to the application. Click on "Create Event" to create an event.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more in the [Upmarket App documentation](https://developers.upmarket.ai/api-reference/home).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
