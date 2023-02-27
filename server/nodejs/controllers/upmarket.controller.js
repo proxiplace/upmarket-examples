@@ -9,13 +9,13 @@ async function initializeLead(req, res, next) {
     const properties = req.body;
     const headers = getAuthHeader();
 
-    await axios.post(
+    const response = await axios.post(
       `${process.env.UPMARKET_API_URL}/leads/initialize`,
       properties,
       { headers }
     );
 
-    res.send("Success");
+    res.send(response.data);
   } catch (error) {
     next(error);
   }
