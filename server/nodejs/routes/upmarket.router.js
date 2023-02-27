@@ -6,6 +6,6 @@ const upmarketController = require('../controllers/upmarket.controller');
 router.post('/initialize-lead', upmarketController.initializeLead);
 
 /* POST create upmarket event. */
-router.post('/', upmarketController.createEvent);
+router.post('/create-event', upmarketController.createEvent);
 
 module.exports = router;

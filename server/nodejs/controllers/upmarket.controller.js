@@ -6,12 +6,16 @@ function getAuthHeader(headers = {}) {
 
 async function initializeLead(req, res, next) {
   try {
+    const properties = req.body;
     const headers = getAuthHeader();
-    const response = axios.post(
+
+    await axios.post(
       `${process.env.UPMARKET_API_URL}/leads/initialize`,
-      {},
+      properties,
       { headers }
     );
+
+    res.send("Success");
   } catch (error) {
     next(error);
   }
@@ -20,11 +24,15 @@ async function initializeLead(req, res, next) {
 async function createEvent(req, res, next) {
   try {
     const headers = getAuthHeader();
-    const response = axios.post(
+    const properties = req.body;
+
+    await axios.post(
       `${process.env.UPMARKET_API_URL}/events/create`,
-      {},
+      properties,
       { headers }
     );
+
+    res.send("Success");
   } catch (error) {
     next(error);
   }
