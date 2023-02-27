@@ -10,10 +10,10 @@ function Home() {
   /** Add the following after the user is successfully logged in */
   async function handleLogin() {
     const leadInitializeData: LeadInitialize = {
-      client_lead_id: "< Enter Client Lead Id here! >",
-      journey_id: "< Enter Journey Id here! >",
-      lead_type: "< Enter Lead Type here! >",
-      lead_name: "< Enter Lead Name here! >",
+      client_lead_id: "< Enter Client Lead Id here! >", // This is the unique identifier from your system
+      journey_id: "< Enter Journey Id here! >", // Upmarket Journey Id
+      lead_type: "< `account` or `contact` >", // Leads are either an account or contact
+      lead_name: "< Enter Lead Name here! >", // String identifying for your lead
     };
 
     await initializeLead(leadInitializeData);
@@ -22,9 +22,9 @@ function Home() {
   /** Add the following whenever an event has occured */
   async function handleEventCreate(eventType: String) {
     const eventCreateData: EventCreate = {
-      journey_id: "< Enter Journey Id here! >",
-      lead_id: "< Enter Lead Id here! >",
-      event_id: eventType,
+      journey_id: "< Enter Journey Id here! >", // Upmarket Journey Id
+      lead_id: "< Enter Lead Id here! >", // The lead_id returned from intializeLead()
+      event_id: eventType, // The event_id representing the event you're creating
     };
 
     await createEvent(eventCreateData);
