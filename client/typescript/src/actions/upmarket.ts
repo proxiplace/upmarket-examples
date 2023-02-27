@@ -10,7 +10,7 @@ async function initializeLead(leadInitializeData: LeadInitialize) {
     const LEAD_INITIALIZE_BACKEND_URL = "initialize-lead";
     const url = `${process.env.REACT_APP_BACKEND_SERVER_URL}/${LEAD_INITIALIZE_BACKEND_URL}`;
     console.log("URL", url);
-    const lead_id = await axios.post(url, leadInitializeData).data;
+    const lead_id = await axios.post(url, leadInitializeData)
     // You must use the lead_id once you receive it, you can either save it in a cookie or to a database
 }
 

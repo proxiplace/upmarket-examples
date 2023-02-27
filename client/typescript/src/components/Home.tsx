@@ -20,7 +20,7 @@ function Home() {
   }
 
   /** Add the following whenever an event has occured */
-  async function handleEventCreate(eventType: String) {
+  async function handleEventCreate(eventType: String) { // R: use event_id instead of eventType so that everything is consistent
     const eventCreateData: EventCreate = {
       journey_id: "< Enter Journey Id here! >", // Upmarket Journey Id
       lead_id: "< Enter Lead Id here! >", // The lead_id returned from intializeLead()
