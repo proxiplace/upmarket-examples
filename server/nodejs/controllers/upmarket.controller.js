@@ -4,13 +4,13 @@ function getAuthHeader(headers = {}) {
   return { ...headers, "x-upmarket-key": process.env.UPMARKET_API_KEY };
 }
 
-async function initializeLead(req, res, next) {
+async function initializeCustomer(req, res, next) {
   try {
     const properties = req.body;
     const headers = getAuthHeader();
 
     const response = await axios.post(
-      `${process.env.UPMARKET_API_URL}/leads/initialize`,
+      `${process.env.UPMARKET_API_URL}/customers/initialize`,
       properties,
       { headers }
     );
@@ -39,6 +39,6 @@ async function createEvent(req, res, next) {
 }
 
 module.exports = {
-  initializeLead,
+  initializeCustomer,
   createEvent,
 };

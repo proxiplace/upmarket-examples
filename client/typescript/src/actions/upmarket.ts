@@ -1,17 +1,17 @@
 import axios from "axios";
-import {LeadInitialize, EventCreate} from "../types/lead.initialize";
+import {CustomerInitialize, EventCreate} from "../types/customer.initialize";
 
 /**
- * Initialize a lead on user login
+ * Initialize a customer on user login
  *
- * For more info visit https://developers.upmarket.ai/api-reference/endpoints/leads/initialize
+ * For more info visit https://developers.upmarket.ai/api-reference/endpoints/customers/initialize
  */
-async function initializeLead(leadInitializeData: LeadInitialize) {
-    const LEAD_INITIALIZE_BACKEND_URL = "initialize-lead";
-    const url = `${process.env.REACT_APP_BACKEND_SERVER_URL}/${LEAD_INITIALIZE_BACKEND_URL}`;
+async function initializeCustomer(customerInitializeData: CustomerInitialize) {
+    const CUSTOMER_INITIALIZE_BACKEND_URL = "initialize-customer";
+    const url = `${process.env.REACT_APP_BACKEND_SERVER_URL}/${CUSTOMER_INITIALIZE_BACKEND_URL}`;
     console.log("URL", url);
-    const lead_id = await axios.post(url, leadInitializeData)
-    // You must use the lead_id once you receive it, you can either save it in a cookie or to a database
+    const customer_id = await axios.post(url, customerInitializeData)
+    // You must use the customer_id once you receive it, you can either save it in a cookie or to a database
 }
 
 /**
@@ -26,6 +26,6 @@ async function createEvent(eventCreateData: EventCreate) {
 }
 
 export { 
-    initializeLead,
+    initializeCustomer,
     createEvent
 };
